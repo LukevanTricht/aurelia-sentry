@@ -14,7 +14,7 @@ export class SentryAppender {
         Sentry.captureEvent({ message, level, extra });
     }
 
-    private minLevel: Levels = Levels.debug;
+    private readonly minLevel: Levels = Levels.debug;
 
     constructor(config: { minLevel: Levels } = null) {
         if (config !== null && config.hasOwnProperty('minLevel')) {

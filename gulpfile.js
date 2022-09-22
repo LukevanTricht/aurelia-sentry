@@ -31,4 +31,4 @@ gulp.task('copy:json', function() {
         .pipe(gulp.dest(modules[4]));
 });
 
-gulp.task('default', ['copy:html', 'copy:css', 'copy:json']);
+gulp.task('default', gulp.parallel('copy:html', 'copy:css', 'copy:json'));
